@@ -9,14 +9,17 @@ h1:hover {
   font-size: 105px;
 }
 
+#intro {
+  font-size: 40px;
+}
+
 p {
   color: white;
-  font-size: 30px;
 }
 
 body {
   background-image: url('images/USA-Squad.jpg');
-  background-size: 1250px
+  background-size: 1250px;
 }
 
 div {
@@ -28,6 +31,7 @@ div {
 div:hover {
   background-color: black;
 }
+
 
 img {
   float: right;
@@ -45,3 +49,4 @@ img:hover {
 a {
   color: blue;
 }
+
