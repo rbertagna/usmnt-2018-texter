@@ -8,7 +8,7 @@ class Goal
 
   def initialize
     @message = 'No Goals have been scored.'
-    @time = Time.now.strftime('%l:%M %P %B %e, %Y (EST is -4000)')
+    @time = Time.now.strftime('%l:%M %P GMT %B %e, %Y (EST is -4000)')
     @goals = Scrape.new #Without Object Orientation: can't find variables in scrape.rb
     @Jozy = @goals.call(:Jozy_Stat)#With: Error: dynamic constant assignment (SyntaxError)
     @Julian = @goals.call(:Julian_Stat) #Too Dynamic to name inside class and def
