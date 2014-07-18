@@ -32,7 +32,7 @@ class Goal
     puts Time.now
   end
 
-  def call_message
+  def call_message 
     @message
   end
 

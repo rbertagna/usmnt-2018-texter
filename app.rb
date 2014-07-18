@@ -4,6 +4,7 @@ require_relative './lib/twilio.rb'
 require_relative './lib/scrape.rb'
 require_relative './lib/check_for_change.rb'
 
+
 get '/' do
   @change_goals = Goal.new
   @change_goals.change_for_view
