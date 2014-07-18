@@ -6,7 +6,7 @@ require_relative 'twilio.rb'
 
 class Goal
 
-  def initialize        
+  def initialize
     @message = 'No Goals have been scored.'
     @time = Time.now
     @goals = Scrape.new #Without Object Orientation: can't find variables in scrape.rb
@@ -21,7 +21,7 @@ class Goal
     @Nagbe = @goals.call(:Nagbe_Stat)
     @Corona = @goals.call(:Corona_Stat)
     @Bradley = @goals.call(:Bradley_Stat)
-    @Trapp = @goals.call(:Trapp_Stat)
+    @Trapp = @goals.call(:Trapp_Stat)    
   end
 
   def message(name)

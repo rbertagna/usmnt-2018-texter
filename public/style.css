@@ -1,9 +1,35 @@
 
 
+h1 {
+  font-size: 100px;
+  color: white;
+}
+
+h1:hover {
+  font-size: 125px;
+}
+
 p {
-  color: red;
+  color: white;
+  font-size: 30px;
 }
 
 body {
-  background-color: grey;
+  background-image: url('USA-Squad.jpg');
+  background-size: 1250px
+}
+
+div {
+  border: dotted;
+  border-width: 10px;
+  border-color: red;
+  background-color: black;
+}
+
+img {
+  float: right;
+  height: 390px;
+  width: auto;
+  border: solid;
+  border-width: 10px;
 }
