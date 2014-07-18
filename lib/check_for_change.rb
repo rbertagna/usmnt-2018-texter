@@ -8,7 +8,7 @@ class Goal
 
   def initialize
     @message = 'No Goals have been scored.'
-    @time = Time.now
+    @time = Time.now.strftime('%l:%M %P %B %e, %Y')
     @goals = Scrape.new #Without Object Orientation: can't find variables in scrape.rb
     @Jozy = @goals.call(:Jozy_Stat)#With: Error: dynamic constant assignment (SyntaxError)
     @Julian = @goals.call(:Julian_Stat) #Too Dynamic to name inside class and def
@@ -45,51 +45,51 @@ class Goal
     # until false
       if @goals.call(:Jozy_Stat) != @Jozy
         @message = "Jozy Altidore with the GOlAzO!!"
-        @time = Time.now
+        @time = Time.now.strftime('%l:%M %P %B %e, %Y')
         @Jozy = @goals.call(:Jozy_Stat)
       elsif @goals.call(:Julian_Stat) != @Julian
         @message = "Julian Green with the GOlAzO!!"
-        @time = Time.now
+        @time = Time.now.strftime('%l:%M %P %B %e, %Y')
         @Julian = @goals.call(:Julian_Stat)
       elsif @goals.call(:Agudelo_Stat) != @Agudelo
         @message = "Juan Agudelo with the GOlAzO!!"
-        @time = Time.now
+        @time = Time.now.strftime('%l:%M %P %B %e, %Y')
         @Agudelo = @goals.call(:Agudelo_Stat)
       elsif @goals.call(:Boyd_Stat) != @Boyd
         @message = "Terrence Boyd with the GOlAzO!!"
-        @time = Time.now
+        @time = Time.now.strftime('%l:%M %P %B %e, %Y')
         @Boyd = @goals.call(:Boyd_Stat)
       elsif @goals.call(:Gedion_Stat) != @Gedion
         @message = "Gedion Zelalem with the GOlAzO!!"
-        @time = Time.now
+        @time = Time.now.strftime('%l:%M %P %B %e, %Y')
         @Gedion = @goals.call(:Gedion_Stat)
       elsif @goals.call(:Yedlin_Stat) != @Yedlin
         @message = "DeAndre Yedlin with the GOlAzO!!"
-        @time = Time.now
+        @time = Time.now.strftime('%l:%M %P %B %e, %Y')
         @Yedlin = @goals.call(:Yedlin_Stat)
       elsif @goals.call(:Gil_Stat) != @Gil
         @message = "Luis Gil with the GOlAzO!!"
-        @time = Time.now
+        @time = Time.now.strftime('%l:%M %P %B %e, %Y')
         @Gil = @goals.call(:Gil_Stat)
       elsif @goals.call(:Aron_Stat) != @Aron
         @message = "Aron Johannsson with the GOlAzO!!"
-        @time = Time.now
+        @time = Time.now.strftime('%l:%M %P %B %e, %Y')
         @Aron = @goals.call(:Aron_Stat)
       elsif @goals.call(:Nagbe_Stat) != @Nagbe
         @message = "Darlington Nagbe with the GOlAzO!!"
-        @time = Time.now
+        @time = Time.now.strftime('%l:%M %P %B %e, %Y')
         @Nagbe = @goals.call(:Nagbe_Stat)
       elsif @goals.call(:Corona_Stat) != @Corona
         @message = "Joe Corona with the GOlAzO!!"
-        @time = Time.now
+        @time = Time.now.strftime('%l:%M %P %B %e, %Y')
         @Corona = @goals.call(:Corona_Stat)
       elsif @goals.call(:Bradley_Stat) != @Bradley
         @message = "Michael Bradley with the GOlAzO!!"
-        @time = Time.now
+        @time = Time.now.strftime('%l:%M %P %B %e, %Y')
         @Bradley = @goals.call(:Bradley_Stat)
       elsif @goals.call(:Trapp_Stat) != @Trapp
         @message = "Wil Trapp with the GOlAzO!!"
-        @time = Time.now
+        @time = Time.now.strftime('%l:%M %P %B %e, %Y')
         @Trapp = @goals.call(:Trapp_Stat)
       else
         puts "No Goals to Report"
