@@ -17,6 +17,11 @@ p {
   color: white;
 }
 
+li {
+  font-size: 30px;
+  color: white;
+}
+
 body {
   background-image: url('images/USA-Squad.jpg');
   background-size: 1250px;
