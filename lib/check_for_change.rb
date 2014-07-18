@@ -26,7 +26,7 @@ class Goal
 
   def message(name)
     @message = name + ' scored a goal! GoLaZo!! #USMNT2018'
-    Messenger.new('+13476758819', '+17187152680', @message)
+    Messenger.new('+13476758819', '+17187152680','19175769322', @message)
     puts @message
     @time = Time.now
     puts Time.now
