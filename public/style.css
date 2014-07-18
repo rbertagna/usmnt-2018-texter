@@ -33,3 +33,7 @@ img {
   border: solid;
   border-width: 10px;
 }
+
+a {
+  color: red;
+}
