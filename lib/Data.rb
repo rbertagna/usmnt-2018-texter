@@ -11,6 +11,7 @@ class Web
     @boyd = 72
     @gedion = 0
     @yedlin = 4
+    @dwyer = 37
     @gil = 12
     @aron = 71
     @nagbe = 26
@@ -42,6 +43,10 @@ class Web
   def yedlin
     @yedlin_diff = @goals.call(:Yedlin_Stat).to_i - @yedlin
     @yedlin_diff
+  end
+  def dwyer
+    @dwyer_diff = @goals.call(:Dwyer_Stat).to_i - @dwyer
+    @dwyer_diff
   end
   def gil
     @gil_diff = @goals.call(:Gil_Stat).to_i - @gil
