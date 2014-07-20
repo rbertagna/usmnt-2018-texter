@@ -7,8 +7,6 @@ require_relative 'twilio.rb'
 class Goal
 
   def initialize
-    @message = 'No Goals have been scored.'
-    @time = Time.now.strftime('%l:%M %P GMT %B %e, %Y')
     @goals = Scrape.new #Without Object Orientation: can't find variables in scrape.rb
     @Jozy = @goals.call(:Jozy_Stat)#With: Error: dynamic constant assignment (SyntaxError)
     @Julian = @goals.call(:Julian_Stat) #Too Dynamic to name inside class and def
@@ -21,14 +19,14 @@ class Goal
     @Nagbe = @goals.call(:Nagbe_Stat)
     @Corona = @goals.call(:Corona_Stat)
     @Bradley = @goals.call(:Bradley_Stat)
-    @Trapp = @goals.call(:Trapp_Stat)    
+    @Trapp = @goals.call(:Trapp_Stat)
+    @Dwyer = @goals.call(:Dwyer_Stat)
   end
 
   def message(name)
     @message = name + ' scored a goal! GoLaZo!! #USMNT2018'
     Messenger.new('+13476758819', '+17187152680','19175769322', @message)
     puts @message
-    @time = Time.now
     puts Time.now
   end
 
@@ -40,65 +38,7 @@ class Goal
     @time
   end
 
-   def change_for_view
-    @goals = Scrape.new
-    # until false
-      if @goals.call(:Jozy_Stat) != @Jozy
-        @message = "Jozy Altidore with the GOlAzO!!"
-        @time = Time.now.strftime('%l:%M %P GMT %B %e, %Y (EST is -4000)')
-        @Jozy = @goals.call(:Jozy_Stat)
-      elsif @goals.call(:Julian_Stat) != @Julian
-        @message = "Julian Green with the GOlAzO!!"
-        @time = Time.now.strftime('%l:%M %P GMT %B %e, %Y (EST is -4000)')
-        @Julian = @goals.call(:Julian_Stat)
-      elsif @goals.call(:Agudelo_Stat) != @Agudelo
-        @message = "Juan Agudelo with the GOlAzO!!"
-        @time = Time.now.strftime('%l:%M %P GMT %B %e, %Y (EST is -4000)')
-        @Agudelo = @goals.call(:Agudelo_Stat)
-      elsif @goals.call(:Boyd_Stat) != @Boyd
-        @message = "Terrence Boyd with the GOlAzO!!"
-        @time = Time.now.strftime('%l:%M %P GMT %B %e, %Y (EST is -4000)')
-        @Boyd = @goals.call(:Boyd_Stat)
-      elsif @goals.call(:Gedion_Stat) != @Gedion
-        @message = "Gedion Zelalem with the GOlAzO!!"
-        @time = Time.now.strftime('%l:%M %P GMT %B %e, %Y (EST is -4000)')
-        @Gedion = @goals.call(:Gedion_Stat)
-      elsif @goals.call(:Yedlin_Stat) != @Yedlin
-        @message = "DeAndre Yedlin with the GOlAzO!!"
-        @time = Time.now.strftime('%l:%M %P GMT %B %e, %Y (EST is -4000)')
-        @Yedlin = @goals.call(:Yedlin_Stat)
-      elsif @goals.call(:Gil_Stat) != @Gil
-        @message = "Luis Gil with the GOlAzO!!"
-        @time = Time.now.strftime('%l:%M %P GMT %B %e, %Y (EST is -4000)')
-        @Gil = @goals.call(:Gil_Stat)
-      elsif @goals.call(:Aron_Stat) != @Aron
-        @message = "Aron Johannsson with the GOlAzO!!"
-        @time = Time.now.strftime('%l:%M %P GMT %B %e, %Y (EST is -4000)')
-        @Aron = @goals.call(:Aron_Stat)
-      elsif @goals.call(:Nagbe_Stat) != @Nagbe
-        @message = "Darlington Nagbe with the GOlAzO!!"
-        @time = Time.now.strftime('%l:%M %P GMT %B %e, %Y (EST is -4000)')
-        @Nagbe = @goals.call(:Nagbe_Stat)
-      elsif @goals.call(:Corona_Stat) != @Corona
-        @message = "Joe Corona with the GOlAzO!!"
-        @time = Time.now.strftime('%l:%M %P GMT %B %e, %Y (EST is -4000)')
-        @Corona = @goals.call(:Corona_Stat)
-      elsif @goals.call(:Bradley_Stat) != @Bradley
-        @message = "Michael Bradley with the GOlAzO!!"
-        @time = Time.now.strftime('%l:%M %P GMT %B %e, %Y (EST is -4000)')
-        @Bradley = @goals.call(:Bradley_Stat)
-      elsif @goals.call(:Trapp_Stat) != @Trapp
-        @message = "Wil Trapp with the GOlAzO!!"
-        @time = Time.now.strftime('%l:%M %P GMT %B %e, %Y (EST is -4000)')
-        @Trapp = @goals.call(:Trapp_Stat)
-      else
-        puts "No Goals to Report"
-      end
-      # sleep(300)
-      # change
-    # end
-  end
-
+   
   def change
     @goals = Scrape.new
     # until false
@@ -138,6 +78,9 @@ class Goal
       elsif @goals.call(:Trapp_Stat) != @Trapp
         message('Wil Trapp')
         @Trapp = @goals.call(:Trapp_Stat)
+      elsif @goals.call(:Dwyer_Stat) != @Dwyer
+        message('Dom Dwyer')
+        @Dwyer = @goals.call(:Dwyer_Stat)
       else
         puts "No Goals to Report"
       end
@@ -150,4 +93,5 @@ class Goal
 end
 
 me = Goal.new
+me.change
 
