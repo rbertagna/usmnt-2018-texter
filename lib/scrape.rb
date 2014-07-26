@@ -49,7 +49,7 @@ class Scrape
     @stats = { #Everybody's career goals
       #mw-content-text > table:nth-child(51) > tbody > tr:nth-child(26) > th:nth-child(11)
       :Jozy_Stat => @jozy.css('#mw-content-text > table:nth-child(51) > tr:last-child > th:last-child').text,
-      :Julian_Stat => @julian.css('#mw-content-text > table:nth-child(21) > tr:last-child > th:last-child').text,
+      :Julian_Stat => @julian.css('#mw-content-text > table:nth-child(21) > tr:last-child > th:nth-child(11)').text,
       :Agudelo_Stat => @agudelo.css('#mw-content-text > table:nth-child(31) > tr:last-child > th:last-child').text,
       :Boyd_Stat => @boyd.css('#mw-content-text > table.wikitable > tr:last-child > th:last-child').text,
       :Gedion_Stat => @gedion.css('#mw-content-text > table.wikitable > tr:last-child > th:last-child').text,
