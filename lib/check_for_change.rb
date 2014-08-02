@@ -21,6 +21,7 @@ class Goal
     @Bradley = @goals.call(:Bradley_Stat)
     @Trapp = @goals.call(:Trapp_Stat)
     @Dwyer = @goals.call(:Dwyer_Stat)
+    @Zusi = @goals.call(:Zusi_Stat)
   end
 
   def message(name)
@@ -81,6 +82,9 @@ class Goal
       elsif @goals.call(:Dwyer_Stat) != @Dwyer
         message('Dom Dwyer')
         @Dwyer = @goals.call(:Dwyer_Stat)
+      elsif @goals.call(:Zusi_Stat) != @Zusi
+        message('Graham Zusi')
+        @Zusi = @goals.call(:Zusi_Stat)
       else
         puts "No Goals to Report"
       end

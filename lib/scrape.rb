@@ -19,6 +19,7 @@ class Scrape
     @bradley = Nokogiri::HTML(@bradley_html)
     @trapp = Nokogiri::HTML(@trapp_html)
     @dwyer = Nokogiri::HTML(@dwyer_html)
+    @zusi = Nokogiri::HTML(@zusi_html)
 
     scrape
   end
@@ -43,6 +44,7 @@ class Scrape
     @bradley_html = open('http://en.wikipedia.org/wiki/Michael_Bradley_(soccer)')
     @trapp_html = open('http://en.wikipedia.org/wiki/Wil_Trapp')
     @dwyer_html = open('http://en.wikipedia.org/wiki/Dom_Dwyer')
+    @zusi_html = open('http://en.wikipedia.org/wiki/Graham_Zusi')
   end
 
   def scrape
@@ -60,7 +62,8 @@ class Scrape
       :Corona_Stat => @corona.css('#mw-content-text > table:nth-child(24) > tr:last-child > th:last-child').text,
       :Bradley_Stat => @bradley.css('#mw-content-text > table:nth-child(41) > tr:last-child > th:nth-child(13)').text,
       :Trapp_Stat => @trapp.css('#mw-content-text > table.wikitable > tr:last-child > th:last-child').text,
-      :Dwyer_Stat => @dwyer.css('#mw-content-text > table.wikitable > tr:last-child > th:last-child').text
+      :Dwyer_Stat => @dwyer.css('#mw-content-text > table.wikitable > tr:last-child > th:last-child').text,
+      :Zusi_Stat => @zusi.css('#mw-content-text > table:nth-child(22) > tr:last-child > th:nth-child(16)').text,
     }
   end
 

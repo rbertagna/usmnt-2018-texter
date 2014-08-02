@@ -15,6 +15,7 @@ get '/' do
   @gedion =  @posts.gedion
   @yedlin =  @posts.yedlin
   @dwyer = @posts.dwyer
+  @zusi = @posts.zusi
   @gil =  @posts.gil
   @aron =  @posts.aron
   @nagbe =  @posts.nagbe

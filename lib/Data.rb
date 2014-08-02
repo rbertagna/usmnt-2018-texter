@@ -18,6 +18,7 @@ class Web
     @corona = 10
     @bradley = 35
     @trapp = 0
+    @zusi = 18
     @goals = Scrape.new
   end
   def jozy
@@ -47,6 +48,10 @@ class Web
   def dwyer
     @dwyer_diff = @goals.call(:Dwyer_Stat).to_i - @dwyer
     @dwyer_diff
+  end
+  def zusi
+    @zusi_diff = @goals.call(:Zusi_Stat).to_i - @zusi
+    @zusi_diff
   end
   def gil
     @gil_diff = @goals.call(:Gil_Stat).to_i - @gil
