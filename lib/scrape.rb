@@ -49,9 +49,9 @@ class Scrape
 
   def scrape
     @stats = { #Everybody's career goals
-      #mw-content-text > table:nth-child(51) > tbody > tr:nth-child(26) > th:nth-child(11)
+      ##mw-content-text > table:nth-child(23) > tbody > tr:nth-child(8) > th:nth-child(11)
       :Jozy_Stat => @jozy.css('#mw-content-text > table:nth-child(51) > tr:last-child > th:last-child').text,
-      :Julian_Stat => @julian.css('#mw-content-text > table:nth-child(21) > tr:last-child > th:nth-child(11)').text,
+      :Julian_Stat => @julian.css('#mw-content-text > table:nth-child(23) > tr:last-child > th:nth-child(11)').text,
       :Agudelo_Stat => @agudelo.css('#mw-content-text > table:nth-child(31) > tr:last-child > th:last-child').text,
       :Boyd_Stat => @boyd.css('#mw-content-text > table.wikitable > tr:last-child > th:last-child').text,
       :Gedion_Stat => @gedion.css('#mw-content-text > table.wikitable > tr:last-child > th:last-child').text,
@@ -65,6 +65,7 @@ class Scrape
       :Dwyer_Stat => @dwyer.css('#mw-content-text > table.wikitable > tr:last-child > th:last-child').text,
       :Zusi_Stat => @zusi.css('#mw-content-text > table:nth-child(22) > tr:last-child > th:nth-child(16)').text,
     }
+    puts @stats
   end
 
   def call(key)
