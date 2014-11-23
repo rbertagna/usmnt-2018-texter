@@ -88,8 +88,8 @@ class Goal
       else
         puts "No Goals to Report"
       end
-      # sleep(300)
-      # change
+      sleep(300)
+      change
     # end
   end
 

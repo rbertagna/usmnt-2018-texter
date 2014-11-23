@@ -65,7 +65,6 @@ class Scrape
       :Dwyer_Stat => @dwyer.css('#mw-content-text > table.wikitable > tr:last-child > th:last-child').text,
       :Zusi_Stat => @zusi.css('#mw-content-text > table:nth-child(22) > tr:last-child > th:nth-child(16)').text,
     }
-    puts @stats
   end
 
   def call(key)
